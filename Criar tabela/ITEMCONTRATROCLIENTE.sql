@@ -1,0 +1,23 @@
+CREATE TABLE ITEMCONTRATOCLIENTE (
+    nucontrato int not null,
+	nuorcamento varchar(100) not null,
+	item varchar(250) not null,
+	idequip varchar(100) not null,
+	placa varchar(10) not null,
+	matricula varchar(10) not null,
+	grupo varchar(100) not null,
+	modeloequip varchar(40) not null,
+	implemento varchar(20) not null,
+	ano varchar(4) not null,
+	unidade varchar(80) not null,
+	quantidade decimal(7,0) not null,
+	preco real not null,
+	valordesconto real not null,
+	valortotal real not null,
+	datamob date not null,
+	datadesmob date,
+	ultimaalteracao varchar(100),
+	dataalteracao date not null,
+	horaalteracao time not null,
+	
+);

@@ -1,0 +1,38 @@
+CREATE TABLE PRODUCAO(
+  idproducao int IDENTITY (1,1) PRIMARY KEY,
+  data date NOT NULL,
+  idequipamento varchar(10) NOT NULL,
+  fabricante varchar(100) NOT NULL,
+  grupoequipamento varchar(40) NOT NULL,
+  modelo varchar(100) NOT NULL,
+  ano varchar(4) NOT NULL,
+  tipocombustivelequip varchar(20),
+  nu_contrato varchar(10) not null,
+  contrato varchar(50) not null,
+  uf varchar(3) NOT NULL,
+  origem varchar(20) NOT NULL,
+  documento varchar(60) NOT NULL,
+  horimetroanterior decimal(7,0) not null,
+  hodometroanterior decimal(7,0) not null,
+  horimetroatual decimal(7,0) NOT NULL,
+  hodometroatual decimal(7,0) NOT NULL,
+  produçãohorimetro decimal(7,0) not null,
+  producaohodometro decimal(7,0) not null,
+  autonomiah decimal(7,2),
+  autonomiakm decimal(7,2),
+  consumomediohorimetro decimal(7,2) not null,
+  consumomediohodometro decimal(7,2) not null,
+  consumofab decimal(7,2),
+  posto varchar(100) NOT NULL,
+  combustivel varchar(20) NOT NULL,
+  quantidade decimal(7,2),
+  peco real,
+  valortotal real,
+  observacao varchar(500),
+  digitado varchar(100),
+  
+
+
+   CONSTRAINT UC_ProducaoHH UNIQUE (horimetroatual,idequipamento),
+   CONSTRAINT UC_ProducaoKM UNIQUE (hodometroatual,idequipamento)
+);
